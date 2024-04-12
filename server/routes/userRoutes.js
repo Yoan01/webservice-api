@@ -25,10 +25,6 @@ const User = require('../models/users');
  *     responses:
  *       201:
  *         description: Utilisateur créé avec succès
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/User'
  *       400:
  *         description: Erreur lors de la création de l'utilisateur
  */
@@ -51,12 +47,6 @@ router.post('/users', async (req, res) => {
  *     responses:
  *       200:
  *         description: Utilisateurs récupérés avec succès
- *         content:
- *           application/json:
- *             schema:
- *               type: array
- *               items:
- *                 $ref: '#/components/schemas/User'
  *       500:
  *         description: Erreur lors de la récupération des utilisateurs
  */
@@ -85,10 +75,6 @@ router.get('/users', async (req, res) => {
  *     responses:
  *       200:
  *         description: Utilisateur récupéré avec succès
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/User'
  *       404:
  *         description: Utilisateur non trouvé
  *       500:
@@ -128,10 +114,6 @@ router.get('/users/:id', getUser, (req, res) => {
  *     responses:
  *       200:
  *         description: Utilisateur mis à jour avec succès
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/User'
  *       400:
  *         description: Erreur lors de la mise à jour de l'utilisateur
  *       404:
