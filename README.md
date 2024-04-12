@@ -1,5 +1,3 @@
-Créer un README détaillé est crucial pour permettre aux utilisateurs et aux développeurs de comprendre rapidement comment mettre en place et utiliser votre API, y compris son interaction avec le script Bash que nous avons développé. Voici un exemple de structure et de contenu pour un tel README :
-
 ---
 
 # Documentation de l'API et du Script Bash `apiCli`
