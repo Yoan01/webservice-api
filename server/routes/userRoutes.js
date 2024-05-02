@@ -1,7 +1,14 @@
 
 const express = require('express');
 const router = express.Router();
-const User = require('../models/users');
+const User = require('../models/user');
+
+/**
+ * @swagger
+ * tags:
+ *   name: Users
+ *   description: API for managing users
+ */
 
 /**
  * @swagger
@@ -176,6 +183,9 @@ async function getUser(req, res, next) {
             return res.status(404).json({ message: 'Utilisateur non trouvé' });
         }
     } catch (err) {
+        if (err.kind === 'ObjectId') {
+            return res.status(400).json({ message: 'ID d\'utilisateur invalide' });
+        }
         return res.status(500).json({ message: err.message });
     }
 
